@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Ship the service disabled by default
+snapctl stop --disable oink
