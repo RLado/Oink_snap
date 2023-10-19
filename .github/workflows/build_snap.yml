@@ -1,0 +1,14 @@
+name: build_snap
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: diddlesnaps/snapcraft-multiarch-action@v1
