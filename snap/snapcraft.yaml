@@ -11,10 +11,9 @@ confinement: strict
 
 apps:
   oink:
-    command: /usr/bin/oink
+    command: usr/bin/oink
     daemon: simple
     plugs: [network]
-    adapter: none
     restart-condition: on-failure
     restart-delay: 60s
 
