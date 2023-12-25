@@ -1,5 +1,5 @@
 name: oink
-version: '1.0.0'
+version: '1.0.1'
 summary: A lightweight DDNS client for Porkbun
 description: |
   Oink! is an unofficial DDNS client for porkbun.com built in Go.
@@ -14,12 +14,15 @@ apps:
     command: /usr/bin/oink
     daemon: simple
     plugs: [network]
+    adapter: none
+    restart-condition: on-failure
+    restart-delay: 60s
 
 parts:
   oink:
     plugin: make
     source: https://github.com/RLado/Oink.git
-    source-tag: v1.0.0
+    source-tag: v1.0.1
     build-packages:
       - golang-go
     override-build: |
