@@ -11,7 +11,7 @@ confinement: strict
 
 apps:
   oink:
-    command: usr/bin/oink
+    command: usr/bin/oink -c $SNAP_COMMON/config.json
     daemon: simple
     plugs: [network]
     restart-condition: on-failure

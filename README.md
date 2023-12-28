@@ -10,7 +10,7 @@ snapcraft
 snap install <oink_pkg>.snap
 ```
 
-⚠️ The configuration file in <snap_dir>/oink/current/etc/oink_ddns/config.json must be modified before activating the DDNS daemon.
+⚠️ The configuration file in **/var/oink/common/config.json** must be modified before activating the DDNS daemon.
 
 ### Running the service
 ```

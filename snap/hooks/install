@@ -1,4 +1,10 @@
 #!/bin/sh
+set -e
+
+# Copy the default config if it doesn't exist
+if [ ! -d $SNAP_COMMON/config.json ]; then
+    cp $SNAP/etc/oink_ddns/config.json $SNAP_COMMON/config.json
+fi
 
 # Ship the service disabled by default
 snapctl stop --disable oink
